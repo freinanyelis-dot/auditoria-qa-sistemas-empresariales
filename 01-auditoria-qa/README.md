@@ -63,9 +63,9 @@ Este repositorio incluirá ejemplos demostrativos de:
    - [Metodología y flujo de auditoría QA](02-metodologia/README.md)
    * [Matrices de auditoría y casos de prueba](03-matriz-y-casos-de-prueba/README.md)
 * [Documentación de procesos y manuales](04-documentacion-de-procesos/README.md)
-* [Gestión y seguimiento de hallazgos](05-seguimiento-y-automatizacion/README.md)
+   * [Gestión y seguimiento de hallazgos](05-seguimiento-y-automatizacion/README.md)
 - Indicadores y reportes de Power BI.
-* [Organización de información y automatización con SharePoint y Power Automate](05-seguimiento-y-automatizacion/README.md)
+   * [Organización de información y automatización con SharePoint y Power Automate](05-seguimiento-y-automatizacion/README.md)
 
 ## 8. Confidencialidad
 
