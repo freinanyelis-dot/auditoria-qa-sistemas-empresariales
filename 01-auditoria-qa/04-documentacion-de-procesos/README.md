@@ -2,7 +2,7 @@
 
 Los ejemplos de este documento son ficticios y se crearon solo con fines demostrativos. No corresponden a ningún sistema ni empresa real.
 
-## 1. Criterios para documentar un proceso
+ 1. Criterios para documentar un proceso
 
 Durante la auditoría, la documentación se revisa, se actualiza o se elabora según lo observado al comparar el manual con el sistema:
 
