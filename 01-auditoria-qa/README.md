@@ -60,7 +60,7 @@ Entre los principales aportes se encuentran:
 
 Este repositorio incluirá ejemplos demostrativos de:
 
-- Metodología y flujo de auditoría QA.
+   - [Metodología y flujo de auditoría QA](02-metodologia/README.md)
 - Matrices de auditoría y casos de prueba.
 - Documentación de procesos y manuales.
 - Gestión y seguimiento de hallazgos.
