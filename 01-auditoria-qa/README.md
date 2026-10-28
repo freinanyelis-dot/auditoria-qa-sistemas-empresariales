@@ -60,13 +60,12 @@ Entre los principales aportes se encuentran:
 
 Este repositorio incluirá ejemplos demostrativos de:
 
-   - [Metodología y flujo de auditoría QA](02-metodologia/README.md)
-   * [Matrices de auditoría y casos de prueba](03-matriz-y-casos-de-prueba/README.md)
+ * [Metodología y flujo de auditoría QA](02-metodologia/README.md)
+* [Matrices de auditoría y casos de prueba](03-matriz-y-casos-de-prueba/README.md)
 * [Documentación de procesos y manuales](04-documentacion-de-procesos/README.md)
-   * [Gestión y seguimiento de hallazgos](05-seguimiento-y-automatizacion/README.md)
-- Indicadores y reportes de Power BI.
-   * [Organización de información y automatización con SharePoint y Power Automate](05-seguimiento-y-automatizacion/README.md)
-
+* [Gestión y seguimiento de hallazgos](05-seguimiento-y-automatizacion/README.md)
+* [Indicadores y reportes de Power BI](06-indicadores-y-resultados/README.md)
+* [Organización de información y automatización con SharePoint y Power Automate](05-seguimiento-y-automatizacion/README.md)
 ## 8. Confidencialidad
 
 Este portafolio tiene fines profesionales y demostrativos. Los ejemplos publicados utilizarán información ficticia o debidamente anonimizada. No se incluirán credenciales, datos de clientes, documentos internos ni evidencias confidenciales pertenecientes a la organización donde se realizó la práctica profesional.
