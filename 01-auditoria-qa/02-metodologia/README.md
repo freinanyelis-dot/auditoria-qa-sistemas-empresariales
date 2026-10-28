@@ -1,96 +1,136 @@
-# Metodología de Auditoría QA
+# Metodología de Auditoría QA de Sistemas Empresariales
 
-## 1. Propósito
+## 1. Objetivo
 
-Esta metodología describe el proceso utilizado para revisar y validar las funciones de un sistema empresarial, registrar los resultados de las pruebas, identificar posibles hallazgos y organizar la documentación correspondiente.
+Establecer una metodología de auditoría QA para revisar las funciones de un sistema empresarial, contrastar su funcionamiento con la documentación disponible, ejecutar pruebas funcionales, registrar evidencias, identificar hallazgos y organizar las recomendaciones y la documentación de los procesos.
 
-El objetivo es mantener un proceso de auditoría estructurado, con resultados trazables y documentación que facilite el seguimiento de las validaciones realizadas.
+La metodología permite mantener trazabilidad sobre los procesos revisados, los resultados obtenidos y las mejoras identificadas durante la auditoría.
 
-## 2. Etapas de la metodología
+## 2. Flujo de trabajo de la auditoría
 
-### Etapa 1. Revisión de la documentación
+El proceso se desarrolla mediante las siguientes etapas:
 
-Se revisa el manual o la documentación disponible para comprender el objetivo de la función, los pasos indicados y el resultado esperado.
+**Manual → Sistema → Seguridad → Prueba QA → Evidencia → Matriz de auditoría → Hallazgo → Recomendación → Documentación y seguimiento**
 
-También se identifica si la documentación está actualizada o si requiere mejoras.
+### Etapa 1. Revisión del manual
 
-### Etapa 2. Validación del proceso en el sistema
+Se revisa el manual disponible para identificar el objetivo de la función, los pasos descritos y el resultado esperado.
 
-Se ingresa a la función que se va a revisar y se compara su comportamiento con la documentación disponible.
+Durante esta revisión se determina si existe documentación, si corresponde al proceso que se está evaluando y si requiere actualización o elaboración.
 
-Se identifican los campos, opciones, permisos y pasos relevantes para comprender el funcionamiento del proceso.
+**Se registra:** el objetivo del proceso, la documentación disponible y las observaciones iniciales.
 
-### Etapa 3. Ejecución de pruebas QA
+### Etapa 2. Revisión de la función en el sistema
 
-Se realizan validaciones funcionales para comprobar si la opción revisada responde según lo esperado.
+Se localiza la función que se va a auditar y se revisa su comportamiento real, sus opciones, campos y pasos de ejecución.
 
-Las pruebas se ejecutan respetando los permisos y las condiciones de acceso autorizadas. Cuando no existe un entorno independiente de pruebas, se priorizan las validaciones que no comprometan datos ni procesos operativos.
+Se compara lo observado con las instrucciones del manual para identificar diferencias entre la documentación y el funcionamiento del sistema.
 
-### Etapa 4. Registro de evidencias
+**Se registra:** el proceso revisado, su funcionamiento y las diferencias identificadas.
 
-Se documentan los resultados observados y, cuando corresponde, se recopilan capturas u otras evidencias que permitan respaldar la validación.
+### Etapa 3. Revisión de seguridad y accesos
 
-Las evidencias deben estar relacionadas con la prueba realizada y evitar la exposición de información confidencial.
+Se consulta la información disponible en la herramienta de seguridad para comprender los accesos asociados a la función y las restricciones que puedan afectar su validación.
 
-### Etapa 5. Registro en la matriz de auditoría
+Esta revisión ayuda a distinguir una limitación de permisos de un problema funcional. Un mensaje de acceso denegado no demuestra, por sí solo, que una función esté en desuso.
 
-Se registra cada proceso revisado en una matriz de seguimiento. Según corresponda, esta puede incluir:
+**Se registra:** la información relevante sobre accesos, permisos y restricciones.
 
-- Sistema, módulo y función revisada.
-- Objetivo y descripción del proceso.
-- Estado de uso identificado.
-- Resultado de la prueba.
-- Estado de la documentación.
-- Evidencias y observaciones.
-- Hallazgos y recomendaciones.
+### Etapa 4. Ejecución de pruebas QA
 
-Los resultados se clasifican como **PASS**, cuando la prueba cumple el resultado esperado; **FAIL**, cuando se identifica un comportamiento que no cumple lo esperado; y **N/A**, cuando la prueba no aplica o no puede evaluarse bajo las condiciones establecidas. El motivo debe quedar documentado para evitar confusiones.
+Se realizan pruebas funcionales para comprobar el comportamiento de la función y contrastarlo con el resultado esperado.
 
-### Etapa 6. Identificación de hallazgos y recomendaciones
+Debido a que no se disponía de un entorno independiente de pruebas, las validaciones se efectuaron bajo las condiciones de acceso autorizadas, evitando acciones que pudieran afectar los datos o la operación.
 
-Cuando se identifica una diferencia entre el comportamiento esperado y el observado, se registra el hallazgo con una descripción clara de la situación.
+Cada prueba se clasifica según el resultado observado:
 
-Se plantea una recomendación cuando corresponde, procurando que permita comprender qué debe revisarse o mejorarse. La clasificación de un hallazgo debe basarse en la evidencia disponible.
+- **PASS:** el comportamiento cumple con lo esperado.
+- **FAIL:** se identifica una diferencia o un comportamiento que no cumple con lo esperado.
+- **N/A:** la prueba no aplica o no puede evaluarse bajo las condiciones disponibles; se documenta el motivo.
 
-### Etapa 7. Documentación y seguimiento
+**Se registra:** la prueba realizada, el resultado y las observaciones correspondientes.
 
-Se actualiza o prepara la documentación del proceso para facilitar su comprensión por parte de los usuarios.
+### Etapa 5. Recopilación de evidencias
 
-El seguimiento de los procesos, hallazgos y recomendaciones permite mantener organizada la información y conocer el estado de las actividades pendientes.
+Se recopilan las evidencias necesarias para respaldar las pruebas y los resultados registrados.
+
+La evidencia permite relacionar lo observado en el sistema con la prueba ejecutada y facilita la revisión posterior de los resultados.
+
+**Se registra:** la evidencia asociada a cada proceso o prueba, respetando la confidencialidad de la información.
+
+### Etapa 6. Registro en la matriz de auditoría
+
+La información recopilada se organiza en la matriz de auditoría, que funciona como registro central para controlar los procesos revisados y sus resultados.
+
+Según corresponda, la matriz contempla:
+
+- Sistema, módulo, menú y proceso.
+- Uso identificado: activo, normal, posible desuso o no usado.
+- Objetivo del proceso.
+- Fecha de creación o último acceso, cuando está disponible.
+- Validez del flujo.
+- Estado del manual.
+- Prueba realizada y resultado PASS, FAIL o N/A.
+- Hallazgo, recomendación, observaciones y evidencia.
+
+La clasificación de uso se determina a partir de la información disponible y no únicamente por la frecuencia de utilización. Asimismo, una función relacionada con un proceso no necesariamente forma parte de su flujo principal.
+
+La matriz se actualiza durante el trabajo de auditoría para mantener la trazabilidad de cada revisión.
+
+### Etapa 7. Registro de hallazgos
+
+Cuando la revisión identifica un problema, una diferencia funcional, una inconsistencia documental u otra situación que requiere atención, se registra el hallazgo correspondiente.
+
+La descripción debe explicar qué se observó y en qué consiste la situación identificada, con respaldo en la evidencia disponible.
+
+No todas las pruebas generan hallazgos. Los resultados satisfactorios también se documentan para mantener un registro completo de la auditoría.
+
+### Etapa 8. Elaboración de recomendaciones
+
+A partir de los hallazgos, se plantean recomendaciones orientadas a corregir o mejorar la situación identificada.
+
+Las recomendaciones deben ser claras y estar relacionadas con el hallazgo que las origina. Cuando no corresponde proponer una mejora, no se debe crear una recomendación artificial.
+
+### Etapa 9. Documentación y seguimiento
+
+Finalmente, se actualiza la documentación existente o se prepara un manual cuando es necesario describir un proceso que no cuenta con instrucciones suficientes.
+
+La documentación busca facilitar la comprensión del proceso mediante su contexto, explicación, pasos de ejecución y evidencias ilustrativas cuando corresponde.
+
+Los registros de procesos, hallazgos, recomendaciones y seguimiento permiten organizar las actividades pendientes y consultar el estado de las revisiones.
 
 ## 3. Ejemplo ficticio de aplicación
 
-**Proceso:** Consulta de existencias de un producto en un sistema de inventario ficticio.
+**Proceso:** Consulta de existencias en un sistema ficticio de inventario.
 
-**Objetivo:** Comprobar que el sistema permite consultar las existencias registradas de un producto.
+1. **Manual:** se revisan las instrucciones disponibles para consultar las existencias.
+2. **Sistema:** se localiza la función y se comprueba cómo presenta la información.
+3. **Seguridad:** se revisan los accesos disponibles para la función.
+4. **Prueba QA:** se ejecuta una consulta autorizada y se compara el resultado con lo esperado.
+5. **Evidencia:** se registra el resultado observado.
+6. **Matriz:** se documentan el proceso, la prueba y su resultado.
+7. **Hallazgo:** se registra únicamente si se identifica una situación que requiere atención.
+8. **Recomendación:** se propone una mejora si el hallazgo lo amerita.
+9. **Documentación y seguimiento:** se actualizan las instrucciones y se registra el estado de las actividades correspondientes.
 
-**Procedimiento:**
-1. Revisar el manual de consulta de inventario.
-2. Ingresar a la opción de consulta de productos.
-3. Buscar un producto de prueba autorizado.
-4. Verificar que se muestre la información esperada.
-5. Registrar el resultado y la evidencia correspondiente.
-6. Actualizar la matriz de auditoría.
-
-**Resultado de ejemplo:** PASS.
-
-**Observación:** La consulta mostró las existencias registradas para el producto utilizado en la prueba.
-
-*Este ejemplo es ficticio y se incluye únicamente para explicar la metodología. No representa resultados de una auditoría real.*
+Este ejemplo es ficticio y tiene fines demostrativos; no representa resultados de una auditoría real.
 
 ## 4. Herramientas de apoyo
 
-- **Excel:** organización y análisis de matrices de auditoría.
-- **SharePoint:** almacenamiento y organización de documentación y registros.
+- **Sistema empresarial:** revisión y validación de las funciones auditadas.
+- **Herramienta de seguridad:** consulta de accesos y restricciones.
+- **Excel:** organización y análisis de la matriz de auditoría.
+- **SharePoint:** organización de documentación y registros de seguimiento.
 - **Power BI:** visualización de indicadores de avance y resultados.
-- **Power Automate:** automatización de actividades de seguimiento, cuando los flujos correspondientes están configurados.
-- **GitHub:** documentación del proyecto y presentación de ejemplos no confidenciales en el portafolio.
+- **Power Automate:** apoyo en los flujos de seguimiento que se encuentren efectivamente configurados.
+- **GitHub:** documentación del proyecto y presentación de ejemplos no confidenciales.
 
-## 5. Principios de trabajo
+## 5. Criterios de la auditoría
 
-- Mantener trazabilidad entre proceso, prueba, resultado y evidencia.
-- Registrar los resultados de forma objetiva.
-- Diferenciar los problemas funcionales de las limitaciones de acceso.
-- No clasificar una función como obsoleta únicamente porque tenga poco uso.
-- Respetar los permisos y evitar acciones que puedan afectar la operación.
+- Mantener relación entre el proceso revisado, la prueba, el resultado y su evidencia.
+- Diferenciar las limitaciones de acceso de los problemas funcionales.
+- Registrar los resultados observados sin asumir causas que no hayan sido comprobadas.
+- Justificar la clasificación de uso con información disponible.
+- Documentar las limitaciones que afecten la ejecución de una prueba.
+- Mantener la matriz actualizada durante la auditoría.
 - Proteger la información interna y utilizar ejemplos ficticios en el portafolio público.
