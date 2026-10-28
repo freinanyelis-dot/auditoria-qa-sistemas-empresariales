@@ -61,7 +61,7 @@ Entre los principales aportes se encuentran:
 Este repositorio incluirá ejemplos demostrativos de:
 
    - [Metodología y flujo de auditoría QA](02-metodologia/README.md)
-- Matrices de auditoría y casos de prueba.
+   * [Matrices de auditoría y casos de prueba](03-matriz-y-casos-de-prueba/README.md)
 - Documentación de procesos y manuales.
 - Gestión y seguimiento de hallazgos.
 - Indicadores y reportes de Power BI.
